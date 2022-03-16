@@ -18,6 +18,4 @@ const getRelatedEmployees = (managerId) => {
   return nameEmployees.map((collaborators) => `${collaborators.firstName} ${collaborators.lastName}`);
 };
 
-console.log(getRelatedEmployees(stephanieId));
-
 module.exports = { isManager, getRelatedEmployees };
