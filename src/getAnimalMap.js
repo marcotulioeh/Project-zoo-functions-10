@@ -49,13 +49,10 @@ const nameSexAnimal = (arrayLocations, sex) => {
 const getAnimalMap = ({ includeNames, sex, sorted } = 0) => {
   if (!includeNames) return arrLocAnimal;
   let result = arrNameAnim;
-  if (sex) {
-    result = nameSexAnimal(arrAniaml, sex);
-  }
+  if (sex) result = nameSexAnimal(arrAniaml, sex);
   if (sorted) {
-    arrAniaml.forEach((loc) => {
-      result[loc].forEach((element) => element[Object.keys(element)[0]].sort());
-    });
+    arrAniaml.forEach((loc) =>
+      result[loc].forEach((element) => element[Object.keys(element)[0]].sort()));
   }
   return result;
 };
